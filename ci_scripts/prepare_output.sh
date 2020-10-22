@@ -14,3 +14,6 @@ mkdir $OUTPUT_PATH
 
 mv $BINARY $OUTPUT_PATH/${ARTIFACT_NAME}
 echo $GENERATED_SHA_256 > $OUTPUT_PATH/${ARTIFACT_NAME}.sha256
+
+mv bazel-deps.jar  $OUTPUT_PATH/
+echo $(shasum -a 256 bazel-deps.jar | awk '{print $1}') > $OUTPUT_PATH/bazel-deps.jar.sha256

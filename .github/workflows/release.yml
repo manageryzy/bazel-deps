@@ -89,5 +89,7 @@ jobs:
             downloads/bazel-deps-macos.sha256
             downloads/bazel-deps-linux
             downloads/bazel-deps-linux.sha256
+            downloads/bazel-deps.jar
+            downloads/bazel-deps.jar.sha256
             update_dependencies.sh
         id: "automatic_releases"
