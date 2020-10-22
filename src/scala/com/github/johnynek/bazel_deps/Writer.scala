@@ -133,7 +133,7 @@ object Writer {
         }
 
         val targetName = target.name
-        val key = s"${targetName.path.asString}:${targetName.name}"
+        val key = s"${targetName.path.asString.replace('\\','/')}:${targetName.name}"
         for {
           targetEncoding <- target.listStringEncoding(separator)
         } yield kListV(s"$key", targetEncoding)
